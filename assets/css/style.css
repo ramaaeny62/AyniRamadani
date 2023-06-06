@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+header.navbar-container {
+  top: 0;
+  position: fixed;
+  max-width: auto;
+  width: 100%;
+  height: 60px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  padding-block: 1rem;
+  z-index: 1;
+
+  background-color: #eef4a994;
+}
+
+header.navbar-container .logo img {
+  width: 120px;
+  height: 50px;
+  flex-wrap: nowrap;
+}
+
+header.navbar-container .nav-list ul {
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem 1rem;
+}
+
+header.navbar-container .nav-list li {
+  list-style-type: none;
+}
+
+header.navbar-container .nav-list li a {
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: rgb(72, 63, 45);
+  text-shadow: 3px 2px 1px rgb(192, 172, 172);
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  transition: all 0.2s ease-in-out;
+}
+
+header.navbar-container .nav-list li:hover a {
+  background-color: #425c77;
+  color: white;
+}
+
+main {
+  max-width: auto;
+  width: 100%;
+  margin-top: 100px;
+  margin-inline: auto;
+  padding: 2rem 4rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main .content {
+  display: flex;
+  flex-direction: column;
+}
+
+main .content .contentOne {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+main .content .contentOne .content-description {
+  flex: 1 1;
+}
+main .content .contentOne .content-description .whatsapp img {
+  width: 300px;
+  height: 120px;
+  margin-top: 50px;
+}
+main .content .contentOne .content-description .whatsapp img:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+main .content .contentOne .content-description .title {
+  font-size: 3.5rem;
+  margin-block: 1rem;
+}
+
+main .content .contentOne .content-description p {
+  line-height: 1.7rem;
+  font-size: 1.2rem;
+}
+main .content .contentOne .content-image {
+  flex: 1;
+  display: flex;
+}
+
+main .content .contentOne .content-image img {
+  margin: auto;
+  min-width: 200px;
+  width: 500px;
+}
+main .content .contentTwo #product-kami {
+  display: flex;
+  border: #425c77 solid;
+  border-radius: 50px;
+  margin-top: 200px;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+}
+main .content .contentTwo .product {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+  align-items: start;
+  justify-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+main .content .contentTwo .product .card_text-start {
+  padding: 20px;
+  margin: 20px;
+}
+main .content .contentTwo .product .card_text-start img {
+  border-radius: 50%;
+}
+main .content .contentTwo .product .card_text-start img:hover {
+  border-radius: 10%;
+}
+
+main .content .contentThree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#hubungiSaya {
+  margin-left: 40px;
+}
+.owner {
+  margin-left: 30px;
+}
+main .content .contentFour .barista {
+  display: flex;
+  align-items: start;
+  justify-items: center;
+  justify-content: center;
+}
+main .content .contentFour .barista img:hover {
+  box-shadow: 3px 3px 3px burlywood;
+  padding: 10px;
+  border: 1px darkgray;
+}
+main .content .contentFour .barista .tim {
+  align-items: center;
+  justify-items: center;
+}
+main .content .contentFour .barista .tim h3 {
+  align-content: center;
+  padding-left: 25%;
+}
+
+main .content .contentFour .barista img {
+  height: 200px;
+  width: 200px;
+  border-radius: 25px;
+  margin: 20px;
+}
+.cerita {
+  margin-left: 20px;
+}
+
+main aside {
+  position: fixed;
+  inset-block: 0;
+  inset-inline-end: 0;
+}
+
+main aside .social-media {
+  height: 100%;
+  display: flex;
+}
+
+main aside .social-media ul {
+  padding: 1.5rem 1rem;
+  margin: auto;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  background-color: #2d3e50;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+main aside .social-media li {
+  list-style-type: none;
+}
+
+main aside .social-media li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+  transition: all 0.1s ease-in-out;
+}
+
+main aside .social-media li a:hover {
+  color: #89b0d9;
+}
+footer {
+  padding-left: 50px;
+  width: 100%;
+  max-width: auto;
+  background-color: #aacff6;
+}
+
+/* /End of Main Content/ */
+
+/* Medium devices (landscape tablets, 768px and down) */
+@media screen and (max-width: 768px) {
+  header.navbar-container {
+    flex-direction: column;
+    height: 120px;
+  }
+
+  header.navbar-container .nav-list ul {
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+  }
+
+  main {
+    padding: 1rem 3rem;
+  }
+
+  main .content .contentOne {
+    padding-top: 50px;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  main .content .contentOne .content-image img{
+    width: 350px;
+  }
+  main .content .contentOne .content-description .whatsapp img {
+    width: 200px;
+    height: 80px;
+  }
+
+  main .content .contentOne .content-description .title {
+    font-size: 3rem;
+  }
+
+  main .content .contentOne .content-description p {
+    font-size: 1rem;
+  }
+
+  main .content .contentOne .content-image {
+    order: -1;
+  }
+  header.navbar-container {
+    background-color: rgba(255, 255, 255, 0.361);
+  }
+}
