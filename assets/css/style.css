@@ -1,135 +1,130 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap");
-
+@import url(https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap);
+header.navbar-container,
+main {
+  width: 100%;
+  margin-inline: auto;
+}
 *,
-*::before,
-*::after {
+::after,
+::before {
   box-sizing: border-box;
 }
-
 html {
   scroll-behavior: smooth;
+  background-color: rgba(250, 241, 229, 0.672);
 }
-
 body {
   height: 100vh;
-  font-family: "Quicksand", sans-serif;
+  font-family: Quicksand, "Courier New", Courier, monospace, sans-serif;
   margin: 0;
-
   display: flex;
   flex-direction: column;
 }
-
 header.navbar-container {
   top: 0;
   position: fixed;
-  max-width: auto;
-  width: 100%;
-  height: 60px;
-  margin-inline: auto;
+  height: 70px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-
   padding-block: 1rem;
   z-index: 1;
-
   background-color: #eef4a994;
 }
-
 header.navbar-container .logo img {
-  width: 120px;
-  height: 50px;
+  width: 20%;
+  object-fit: contain;
   flex-wrap: nowrap;
+  aspect-ratio: 3/2;
 }
-
 header.navbar-container .nav-list ul {
   padding-left: 0;
   display: flex;
   justify-content: center;
   gap: 2rem 1rem;
 }
-
-header.navbar-container .nav-list li {
+header.navbar-container .nav-list li,
+main aside .social-media li {
   list-style-type: none;
 }
-
 header.navbar-container .nav-list li a {
   text-decoration: none;
   font-size: 1.05rem;
-  font-weight: bold;
-  color: rgb(72, 63, 45);
-  text-shadow: 3px 2px 1px rgb(192, 172, 172);
+  font-weight: 700;
+  color: #483f2d;
+  text-shadow: 3px 2px 1px #c0acac;
   padding: 0.5rem 1.5rem;
   border-radius: 999px;
-  transition: all 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
-
 header.navbar-container .nav-list li:hover a {
   background-color: #425c77;
-  color: white;
+  color: #fff;
 }
-
 main {
-  max-width: auto;
-  width: 100%;
   margin-top: 100px;
-  margin-inline: auto;
   padding: 2rem 4rem;
   flex: 1;
-  display: flex;
-  flex-direction: column;
   align-items: center;
 }
-
 main .content {
   display: flex;
   flex-direction: column;
 }
-
 main .content .contentOne {
   flex: 1;
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  background-color: #faebd7;
+  border: solid #427774;
+  box-shadow: 5px 5px 5px 5px #2d3e50;
+  border-radius: 10px;
 }
-
 main .content .contentOne .content-description {
   flex: 1 1;
 }
 main .content .contentOne .content-description .whatsapp img {
-  width: 300px;
-  height: 120px;
+  width: 250px;
+  height: 80px;
   margin-top: 50px;
 }
 main .content .contentOne .content-description .whatsapp img:hover {
   cursor: pointer;
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+  transform: translateX(30px);
 }
-
 main .content .contentOne .content-description .title {
   font-size: 3.5rem;
   margin-block: 1rem;
+  padding-left: 15px;
 }
-
 main .content .contentOne .content-description p {
   line-height: 1.7rem;
   font-size: 1.2rem;
+  padding-left: 15px;
 }
 main .content .contentOne .content-image {
   flex: 1;
   display: flex;
 }
-
 main .content .contentOne .content-image img {
   margin: auto;
   min-width: 200px;
   width: 500px;
 }
+main .content .contentFour,
+main .content .contentThree,
+main .content .contentTwo {
+  margin-top: 150px;
+  background-color: #faebd7;
+  border: solid #427774;
+  box-shadow: 5px 5px 5px 5px #2d3e50;
+  border-radius: 10px;
+}
 main .content .contentTwo #product-kami {
   display: flex;
-  border: #425c77 solid;
+  border: solid #427774;
   border-radius: 50px;
-  margin-top: 200px;
+  margin: 50px;
   padding: 10px;
   align-items: center;
   justify-content: center;
@@ -143,7 +138,6 @@ main .content .contentTwo .product {
   justify-content: center;
   gap: 5px;
 }
-
 main .content .contentTwo .product .card_text-start {
   padding: 20px;
   margin: 20px;
@@ -154,11 +148,46 @@ main .content .contentTwo .product .card_text-start img {
 main .content .contentTwo .product .card_text-start img:hover {
   border-radius: 10%;
 }
-
-main .content .contentThree {
+main .content .contentThree .baru {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 50px;
+}
+main .content .contentThree .market {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.card img {
+  width: 200px;
+  height: 200px;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+.price {
+  color: grey;
+  font-size: 22px;
+}
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: #fff;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+.card button:hover {
+  opacity: 0.7;
 }
 #hubungiSaya {
   margin-left: 40px;
@@ -173,9 +202,9 @@ main .content .contentFour .barista {
   justify-content: center;
 }
 main .content .contentFour .barista img:hover {
-  box-shadow: 3px 3px 3px burlywood;
+  box-shadow: 3px 3px 3px #deb887;
   padding: 10px;
-  border: 1px darkgray;
+  border: 1px #a9a9a9;
 }
 main .content .contentFour .barista .tim {
   align-items: center;
@@ -185,7 +214,6 @@ main .content .contentFour .barista .tim h3 {
   align-content: center;
   padding-left: 25%;
 }
-
 main .content .contentFour .barista img {
   height: 200px;
   width: 200px;
@@ -195,96 +223,99 @@ main .content .contentFour .barista img {
 .cerita {
   margin-left: 20px;
 }
-
 main aside {
   position: fixed;
   inset-block: 0;
   inset-inline-end: 0;
 }
-
 main aside .social-media {
   height: 100%;
   display: flex;
 }
-
 main aside .social-media ul {
   padding: 1.5rem 1rem;
   margin: auto;
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
   background-color: #2d3e50;
-
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
 }
-
-main aside .social-media li {
-  list-style-type: none;
-}
-
 main aside .social-media li a {
   text-decoration: none;
   font-size: 1.5rem;
-  color: white;
-  transition: all 0.1s ease-in-out;
+  color: #fff;
+  transition: 0.1s ease-in-out;
 }
-
 main aside .social-media li a:hover {
   color: #89b0d9;
 }
 footer {
   padding-left: 50px;
   width: 100%;
-  max-width: auto;
-  background-color: #aacff6;
+  background-color: #aacff656;
 }
-
-/* /End of Main Content/ */
-
-/* Medium devices (landscape tablets, 768px and down) */
-@media screen and (max-width: 768px) {
-  header.navbar-container {
-    flex-direction: column;
-    height: 120px;
+@media screen and (max-width: 910px) {
+  header.navbar-container .logo {
+    width: 15%;
   }
-
+  header.navbar-container .logo img {
+    width: 90%;
+    height: 90%;
+  }
   header.navbar-container .nav-list ul {
     flex-wrap: wrap;
-    column-gap: 0.5rem;
   }
-
   main {
     padding: 1rem 3rem;
   }
-
   main .content .contentOne {
     padding-top: 50px;
     flex-direction: column;
     gap: 2rem;
   }
-  main .content .contentOne .content-image img{
+  main .content .contentOne .content-image img {
     width: 350px;
   }
   main .content .contentOne .content-description .whatsapp img {
     width: 200px;
     height: 80px;
   }
-
   main .content .contentOne .content-description .title {
     font-size: 3rem;
   }
-
   main .content .contentOne .content-description p {
     font-size: 1rem;
+    justify-content: center;
+    align-items: center;
   }
-
   main .content .contentOne .content-image {
     order: -1;
   }
   header.navbar-container {
     background-color: rgba(255, 255, 255, 0.361);
+  }
+  main .content .contentTwo > h2 {
+    font-size: 17px;
+  }
+  main .content .contentTwo .product {
+    padding-left: 10%;
+  }
+  main .content .contentThree .market {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+  main .content .contentFour .barista {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #hubungiSaya{
+    margin-left: 35%;
   }
 }
